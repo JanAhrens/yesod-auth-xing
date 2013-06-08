@@ -11,8 +11,10 @@ your configuration might look like this.
 You have to get an OAuth consumer key and secret from the [XING developer site](https://dev.xing.com/).
 
 ```haskell
+import Yesod.Auth.XING
+
 instance YesodAuth YourSite where
-  type AuthId XINGAuth = Text
+  type AuthId YourSite = Text
   getAuthId creds = return $ lookup "oauth_token" (credsExtra creds)
   loginDest _     = RootR
   logoutDest _    = RootR
