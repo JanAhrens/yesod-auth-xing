@@ -1,5 +1,5 @@
-This package enables users of your [Yesod](http://www.yesodweb.com) site to authenticate users using the [XING
-API](https://dev.xing.com).
+This package enables users of your [Yesod](http://www.yesodweb.com) site to authenticate with their [XING
+account](https://www.xing.com/).
 
 It's currently under development and is **not** considered **stable**.
 This library is a private project and isn't associated with XING AG.
@@ -7,7 +7,8 @@ This library is a private project and isn't associated with XING AG.
 # Usage
 
 Assuming that your [foundation datatype](http://www.yesodweb.com/book/basics) is named `YourSite`
-your configuration might look like this:
+your configuration might look like this.
+You have to get an OAuth consumer key and secret from the [XING developer site](https://dev.xing.com/).
 
 ```haskell
 instance YesodAuth YourSite where
